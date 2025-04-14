@@ -16,7 +16,7 @@
 		<Teaser>Mod to balance multiplayer game.</Teaser>
 		<Authors>github.com/CivilizationVIBetterBalancedGame</Authors>
 		<Version>6040</Version>
-		<SpecialThanks>abstr, Apeul, Bastik, Bobnotarobot, codenaugh, coloo, D. / Jack The Narrator,  Facu, FlashyFeeds, fl0r3k, GLaYD, goldfire, iElden, Ignasiuz, keride, Kid, Klas, MarsLife(puj), Onyxum, OSCAR., priz, robal, seed.of.apricot, Vodairo, wazabaza, WhySoHate, Ybanca, ZhenjaMax</SpecialThanks>
+		<SpecialThanks>abstr, Apeul, Bastik, Bobnotarobot, codenaugh, coloo, D. / Jack The Narrator, Hej, Facu, FlashyFeeds, fl0r3k, GLaYD, goldfire, iElden, Ignasiuz, keride, Kid, Klas, MarsLife(puj), Onyxum, OSCAR., priz, robal, seed.of.apricot, Sent Kurokawa, VioletXU1534, Vodairo, wazabaza, WhySoHate, Ybanca, ZhenjaMax</SpecialThanks>
 		<CompatibleVersions>2.0</CompatibleVersions>
 	</Properties>
 	
@@ -264,6 +264,16 @@
 				<ConfigurationId>VictoryMasterSlider</ConfigurationId>
 				<Group>Game</Group>
 				<Value>5</Value>
+			</ConfigurationValueMatches>
+		</Criteria>
+
+
+		<!-- Settlers -->
+		<Criteria id="Settlers_Sent_Back">
+			<ConfigurationValueMatches>
+				<ConfigurationId>SettlersConfig</ConfigurationId>
+				<Group>Game</Group>
+				<Value>0</Value>
 			</ConfigurationValueMatches>
 		</Criteria>
 	</ActionCriteria>
@@ -1007,6 +1017,16 @@
 			<File>sql/victories/new_bbg_cv.sql</File>
 			<File>sql/victories/new_bbg_cv_2.sql</File>
 		</UpdateDatabase>
+
+		<!-- Settlers -->
+		<UpdateDatabase id="Settlers">
+			<Properties>
+				<LoadOrder>20000</LoadOrder>
+			</Properties>
+			<Criteria>Settlers_Sent_Back</Criteria>
+			<File>sql/Settlers/Settlers.sql</File>
+		</UpdateDatabase>
+
 		<!-- -->
 		<UpdateIcons id="bbg_Icons">
 			<File>data/new_bbg_icons.xml</File>
@@ -1300,6 +1320,8 @@
 		<File>sql/victories/new_bbg_rv_1.sql</File>
 		<File>sql/victories/new_bbg_rv_2.sql</File>
 		<File>sql/victories/new_bbg_new_domination.sql</File>
+
+		<File>sql/Settlers/Settlers.sql</File>
 
 		<File>sql/bbcc/bbcc_configvalues.sql</File>
 	    <File>sql/bbcc/core_bbcc.sql</File>
